@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  --font-display: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    serif;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
