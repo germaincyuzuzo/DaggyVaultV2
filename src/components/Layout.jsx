@@ -5,11 +5,11 @@ export function Layout() {
   const { itemCount } = useCart()
 
   return (
-    <div className="min-h-screen bg-neutral-50 text-neutral-900 flex flex-col">
+    <div className="min-h-screen bg-white text-neutral-900 flex flex-col">
       <header className="border-b border-neutral-200 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <Link to="/" className="flex items-center gap-2">
-            <span className="h-9 w-9 rounded-full bg-brand-800 text-white flex items-center justify-center font-semibold tracking-tight">
+            <span className="h-9 w-9 rounded-full bg-black text-white flex items-center justify-center font-semibold tracking-tight">
               DV
             </span>
             <div className="leading-none">
@@ -46,7 +46,7 @@ export function Layout() {
             >
               <span>Cart</span>
               {itemCount > 0 && (
-                <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-800 px-1 text-[11px] font-semibold text-white">
+                <span className="inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-600 px-1 text-[11px] font-semibold text-white">
                   {itemCount}
                 </span>
               )}
