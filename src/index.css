@@ -1,9 +1,9 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 @theme {
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
-  --font-display: 'Playfair Display', system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
-    serif;
+  --font-sans: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
 }
 
 :root {
@@ -12,7 +12,14 @@
 }
 
 html {
+  font-size: 15px;
   scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 html,

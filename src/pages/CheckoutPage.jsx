@@ -83,8 +83,8 @@ export function CheckoutPage() {
           </div>
         </FadeIn>
       ) : (
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,2fr),minmax(0,1fr)]">
-          <FadeIn>
+        <div className="grid gap-6 md:grid-cols-3">
+          <FadeIn className="md:col-span-2">
             <form
               onSubmit={handleSubmit}
               className="space-y-6 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-neutral-100"

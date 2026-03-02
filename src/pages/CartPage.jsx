@@ -4,7 +4,7 @@ import { FadeIn } from '../components/FadeIn.jsx'
 
 export function CartPage() {
   const navigate = useNavigate()
-  const { items, totalPrice, updateQuantity, removeFromCart } = useCart()
+  const { items, totalPrice, updateQuantity, removeFromCart, clearCart } = useCart()
 
   const hasItems = items.length > 0
 
@@ -27,13 +27,22 @@ export function CartPage() {
             </h1>
           </div>
           {hasItems && (
-            <button
-              type="button"
-              onClick={() => navigate('/checkout')}
-              className="inline-flex items-center justify-center rounded-full bg-[#E10600] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#c20000] hover:scale-105 active:scale-95"
-            >
-              Proceed to checkout
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={clearCart}
+                className="text-xs font-medium text-neutral-400 underline underline-offset-4 transition-colors hover:text-[#E10600]"
+              >
+                Clear cart
+              </button>
+              <button
+                type="button"
+                onClick={() => navigate('/checkout')}
+                className="inline-flex items-center justify-center rounded-full bg-[#E10600] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-[#c20000] hover:scale-105 active:scale-95"
+              >
+                Proceed to checkout
+              </button>
+            </div>
           )}
         </header>
       </FadeIn>
