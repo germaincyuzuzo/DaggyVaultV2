@@ -33,7 +33,16 @@ export function Layout() {
   return (
     <div className="min-h-screen bg-white text-neutral-900 flex flex-col">
       {/* ── Header ── */}
-      <header className="sticky top-0 z-50 bg-[#111111] border-b border-white/10">
+      <header className="relative sticky top-0 z-50 bg-[#111111] border-b border-white/10">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-full"
+          style={{
+            background: 'linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 20%, transparent 100%)',
+            opacity: pastSlideshow ? 1 : 0,
+            transition: 'opacity 0.5s ease',
+          }}
+        />
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
           <Link to="/" className="flex items-center gap-3" onClick={() => setMenuOpen(false)}>
             <span className="h-9 w-9 rounded-full bg-[#E10600] text-white flex items-center justify-center font-bold text-sm tracking-tight">
@@ -149,7 +158,16 @@ export function Layout() {
       </main>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#111111] border-t border-white/10">
+      <footer className="relative bg-[#111111] border-t border-white/10">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-full"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 20%, transparent 100%)',
+            opacity: pastSlideshow ? 1 : 0,
+            transition: 'opacity 0.5s ease',
+          }}
+        />
         <div className="mx-auto max-w-6xl px-4 py-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between text-xs">
             <div className="flex items-center gap-3">
